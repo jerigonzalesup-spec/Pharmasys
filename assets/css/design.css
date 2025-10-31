@@ -1,0 +1,379 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  background: #f8f9fc;
+  color: #333;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  /* top padding is set dynamically by JS to match header height */
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px; /* fixed header height */
+  z-index:1030; /* ensure header sits above page content */
+  justify-content: space-between;
+  padding: 0 20px; /* horizontal padding, vertical centered by height */
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1877f2;
+}
+
+/* Admin greeting displayed on admin pages */
+.admin-greeting {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.admin-greeting img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #e9eefc;
+}
+.admin-greeting h2 {
+  font-size: 1.6rem;
+  margin: 0;
+  font-weight: 700;
+}
+
+.logo-icon {
+  width: 20px;
+  height: 20px;
+  background-color: #1877f2;
+  margin-right: 10px;
+  border-radius: 4px;
+}
+
+nav a {
+  margin: 0 10px;
+  color: #555;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #1877f2;
+}
+
+.search-container {
+  position: relative;
+ 
+}
+
+.search-container input {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+
+.search-button  {
+  /* original absolute positioning overridden so button can sit inline with the input */
+  position: relative;
+  right: auto;
+  padding: 6px 12px;
+  background-color: #1877f2;
+  color: white;
+  border: none;
+  border-radius: 0.5rem; /* default radius; adjusted by combined rules below */
+  cursor: pointer;
+}
+
+
+.primary-button {
+  background-color: #1877f2;
+  text-decoration: none !important;
+  border: none;
+  color: white !important;
+  padding: 5px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+#logout {
+  background-color: #1877f2;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+}
+
+#logout:hover {
+  background-color: #155ab2;
+}
+
+#profile {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+
+}
+
+#profile:hover {
+  color: #1877f2;
+}
+
+
+
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  left: 20px;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sidebar .icon {
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  border-radius: 6px;
+}
+
+/* Main Branding */
+main {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+main h1 {
+  font-size: 4rem;
+  color: #1877f2;
+}
+
+.reg-symbol {
+  font-size: 1rem;
+  vertical-align: super;
+}
+
+/* Footer */
+footer {
+  position: absolute;
+  bottom: 20px;
+  left: 40px;
+  right: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigator select {
+  margin-right: 20px;
+  padding: 5px;
+  border-radius: 6px;
+}
+
+.footer-branding {
+  display: flex;
+  align-items: center;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.footer-branding .logo-icon.small {
+  width: 12px;
+  height: 12px;
+  background-color: #1877f2;
+  margin-right: 8px;
+}
+
+/* Gradient background shape */
+body::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  height: 200px;
+  background: radial-gradient(circle at bottom right, #9f70ff 0%, #ffffff 80%);
+  border-top-left-radius: 50% 50%;
+  z-index: -1;
+}
+
+#signInModalLabel {
+    color: blue;
+  font-weight: bold;
+}
+
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 0.375rem;
+  border-top-right-radius: 0.375rem;
+}
+
+#Order {
+ border: 1px solid black;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 50px;
+}
+
+#Order h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: bold;
+  color: blue;
+}
+
+
+.about-section {
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 1px solid black;
+  padding: 40px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.about-section h2 {
+  font-weight: 700;
+  color: #1877f2;
+}
+
+.about-section p {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* === Header layout and alignment === */
+
+.search-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Make the search input and button appear as a single, matching pill */
+.search-container { display: flex; align-items: center; }
+.search-container input { border-top-right-radius: 0; border-bottom-right-radius: 0; }
+.search-container .search-button { border-top-left-radius: 0; border-bottom-left-radius: 0; }
+.search-container input, .search-container .search-button { height: 38px; }
+.search-container input { padding-left: 12px; }
+.search-container .search-button { padding: 6px 12px; }
+
+.search-container input {
+  border-radius: 20px;
+  padding-left: 12px;
+}
+
+.bi-cart, .bi-bell {
+  transition: transform 0.2s ease;
+}
+
+.bi-cart:hover, .bi-bell:hover {
+  transform: scale(1.1);
+}
+
+
+
+/* Profile page */
+
+/* === Admin mode visual overrides (green theme) === */
+header.admin-mode .logo {
+  color: #198754; /* Bootstrap success green */
+}
+
+header.admin-mode .logo-icon {
+  background-color: #198754;
+}
+
+header.admin-mode .logo-icon.small {
+  background-color: #198754;
+}
+
+header.admin-mode nav a:hover {
+  color: #198754;
+}
+
+header.admin-mode .search-button,
+header.admin-mode .primary-button,
+header.admin-mode #logout {
+  background-color: #198754;
+  color: #fff !important;
+}
+
+header.admin-mode #logout:hover {
+  background-color: #146c43;
+}
+
+/* Make admin greeting border use a subtle green */
+header.admin-mode .admin-greeting img { border-color: rgba(25,135,84,0.12); }
+
+/* Stronger admin-mode overrides to ensure green theme applies */
+header.admin-mode .logo { color: #198754 !important; }
+header.admin-mode .logo-icon { background-color: #198754 !important; }
+header.admin-mode nav a { color: #333 !important; }
+header.admin-mode nav a:hover { color: #198754 !important; }
+header.admin-mode .primary-button, header.admin-mode .search-button, header.admin-mode #logout { background-color: #198754 !important; border-color: #198754 !important; }
+header.admin-mode #profile:hover { color: #198754 !important; }
+
+/* Global offcanvas & admin-sidebar horizontal overflow protection
+   This prevents the admin offcanvas (and any Bootstrap offcanvas) from
+   producing a horizontal scrollbar due to padding, shadows, or wide children.
+   Applied globally so it works across all pages where the offcanvas is used. */
+.offcanvas,
+.offcanvas * {
+  box-sizing: border-box !important;
+}
+.offcanvas {
+  overflow-x: hidden !important;
+  -webkit-overflow-scrolling: touch;
+}
+.offcanvas .offcanvas-body {
+  overflow-x: hidden !important;
+  width: 100% !important;
+}
+/* Ensure list-groups and sidebar items inside offcanvas don't exceed container width */
+.offcanvas .list-group,
+.offcanvas .admin-sidebar,
+.offcanvas .list-group-item {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  overflow-x: hidden !important;
+  white-space: normal !important;
+}
+/* Optional: truncate extremely long labels to a single line with ellipsis */
+.offcanvas .list-group-item .text-truncate-ellipsis {
+  display: inline-block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: calc(100% - 48px);
+}
+
+/* Hide tiny webkit horizontal scrollbar inside offcanvas */
+.offcanvas::-webkit-scrollbar { height: 0 !important; }
