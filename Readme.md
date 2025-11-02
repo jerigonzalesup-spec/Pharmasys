@@ -1,27 +1,34 @@
+# PharmaSys : Online Medicine and Inventory Management System
+ Develop by:
+ UP-FBS1-BSIT2-03
+ 
+User Cresidentials
+Admin / Pharmacist Login:
+Username: superadmin
+Password: superadmin
 
-# Pharma Sys
+# How to Run the Project
+1. Download and install XAMPP.
+2. Copy the project folder (pharmasys) into the htdocs directory of XAMPP.
+3. Start Apache and MySQL in the XAMPP Control Panel.
+4. Open phpMyAdmin at http://localhost/phpmyadmin
+5. Create a new database named pharmasys
+6. Import the SQL file from the DB folder.
+7. In your browser, go to http://localhost/Pharmasys/pages/index.php
+8. Login using the credentials above.
+ 
+# System Features:
+* Medicine inventory management (add, update, delete)
+* Search & filter - easily find medecines by name, catehory, and type
+* Order Module - customers can place and track orders
+* Stock status and availability tracking
+* User Roles & Permissions - different access for superadmin, admin, ans customers
 
-A pharmacy inventory management system designed to track medicine stock levels and expiration dates. It aims to prevent stock shortages and ensure no expired medicines are sold.
 
-##  Objectives
-
-- Track medicine inventory and expiry dates
-- Enable real-time stock inquiries for customers
-- Allow customers to order medicines online
-- Provide efficient stock monitoring for pharmacists
-
-##  Features
-
-- ✅ Real-time stock inquiry module for customers
-- ✅ Medicine management (add, update, delete medicine details)
-- ✅ Online ordering for customers
-- ✅ Stock availability tracking
-
-## Team members:
-- Gonzales, Jeremy
-- Balondro, Kineth
-- Kraus, Vin Jordan
-- Labrador, Simeon
-- Bacugan, Nathanael
-- Sibucao, Chloe Nicole
-
+# Developers:
+* Gonzales, Jeremy - Project Manager
+* Bacugan, Nathanael - Database administrator / Programmer
+* Balondro, Kineth - System Analyst
+* Kraus, Vin Jordan - Programmer
+* Labrador, Simeon - Programmer
+* Sibucao, Chloe Nicole - Documentation Analyst
